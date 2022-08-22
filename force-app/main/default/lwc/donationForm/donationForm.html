@@ -1,0 +1,38 @@
+<template>
+    <div class="container">
+        <label>Donation Form</label>
+        <div>
+            <lightning-input 
+                label="First Name"
+                type="text"
+                name="firstName"
+                onchange={handleChange}
+            ></lightning-input>
+            <lightning-input 
+                label="Last Name"
+                type="text"
+                name="lastName"
+                onchange={handleChange} 
+            ></lightning-input>
+        </div>
+        <div>
+            <lightning-input 
+                label="Email"
+                type="email"
+                name="email"
+                onchange={handleChange} 
+            ></lightning-input>
+            <lightning-input 
+                label="Phone"
+                type="text"
+                name="phone"
+                onchange={handleChange} 
+            ></lightning-input>
+        </div>
+        <lightning-button 
+            variant="brand" 
+            label="Submit" 
+            onclick={handleClick}
+        ></lightning-button>
+    </div>
+</template>
