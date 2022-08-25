@@ -2,20 +2,16 @@ public without sharing class DonationForm_Ctrl {
 
     @AuraEnabled
     public static Contact createContact(String data){
-        try {
-            ContactDTO contactDto = (ContactDTO) JSON.deserialize(data, ContactDTO.class);
-            Contact contact = new Contact(
-                FirstName = contactDto.firstName,
-                LastName = contactDto.lastName,
-                Phone = contactDto.phone,
-                Email = contactDto.email
-            );
+        ContactDTO contactDto = (ContactDTO) JSON.deserialize(data, ContactDTO.class);
+        Contact contact = new Contact(
+            FirstName = contactDto.firstName,
+            LastName = contactDto.lastName,
+            Phone = contactDto.phone,
+            Email = contactDto.email
+        );
 
-            insert contact;
-            return contact;
-        } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
-        }
+        insert contact;
+        return contact;
     }
     
 

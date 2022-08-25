@@ -4,6 +4,7 @@
     background: white;
     padding: 1rem;
     border-radius: 1rem;
+    border: 1px solid #e4e4ff;
 }
 
 label {

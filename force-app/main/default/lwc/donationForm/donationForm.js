@@ -17,7 +17,8 @@ export default class DonationForm extends LightningElement {
     }
 
     async handleClick() {
-        let result = await createContact(JSON.stringify(this.contact));
+        console.log(JSON.stringify(this.contact));
+        let result = await createContact({data : JSON.stringify(this.contact)});
         console.log(result);
     }
 
